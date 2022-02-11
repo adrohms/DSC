@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center"> Iris Flower </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-list>
+      <ion-item>
+        <ion-label> Altura Sépala: </ion-label>
+        <ion-input type="number" ngModel name="alturaSepa" number #altSepa="ngModel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label> Largura Sépala: </ion-label>
+        <ion-input type="number" ngModel name="larguraSepa" number #largSepa="ngModel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label> Altura Pétala: </ion-label>
+        <ion-input type="number" ngModel name="alturaPeta" number #altPeta="ngModel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label> Largura Pétala: </ion-label>
+        <ion-input type="number" ngModel name="larguraPeta" number #largPeta="ngModel"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit" fill="outline" color="primary" expand="full" (click)="onSend()"> {{this.data?this.data:this.isSend}} </ion-button>
+  </form>
+  
+</ion-content>
